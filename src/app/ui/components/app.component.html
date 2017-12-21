@@ -1,0 +1,4 @@
+<app-login-form *ngIf="!layerService.loginUser()">
+</app-login-form>
+<app-main *ngIf="layerService.loginUser()">
+</app-main>

@@ -1,0 +1,11 @@
+@import '~assets/sass/variables';
+
+.profile-img img {
+    height: 10em;
+    border-radius: 50%;
+    border: 2px solid $spoti-green;
+}
+h3 { 
+    color: $lg-grey; 
+    font-weight: 200;
+}

@@ -1,0 +1,21 @@
+<section class="wrapper-search">
+    <div class="search-keyword">
+        <input [formControl]="searchField" type="text"
+            placeholder="Search for albums..." autofocus>
+    </div>
+    <div class="wrapper-results" *ngIf="albums.length > 0">
+        <ul class="result-list">
+            <li *ngFor="let album of albums" 
+                (click)="presenter.viewAlbum(album)">
+                <div class="album-info">
+                    {{ album.name }}
+                    <p> ( <span *ngFor="let artist of album.artists">
+                        {{ artist }} </span> )</p>
+                </div>
+                <div class="album-image">
+                    <img src="{{ album.imageUrls[0] }}"/>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

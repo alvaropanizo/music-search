@@ -1,0 +1,182 @@
+@import '~assets/sass/variables';
+
+html, body, container{
+    margin:0px;   
+    height:100%;  
+}
+
+.btn, h1, h2, h3 {
+    font-family: $hd-text;  
+}
+
+p {
+    font-family: $nm-text;
+}
+
+.wrapper-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    background: url(~/assets/img/login-background.jpg);
+    background-size: cover;
+}
+
+.btn {
+    border: none;    
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 1em 3em;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn-1 {
+    border-radius: 10px;
+    border: 3px solid $spoti-green;
+    color: $spoti-green;
+}
+
+.btn-1:hover {
+    color: white;
+    z-index: 0;
+}
+
+.btn-1:after {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: $spoti-green;
+}
+
+.lens {
+    background-color: rgba(48, 48, 48, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-1:hover:after, .btn-1:active:after {
+    height: 100%;
+    z-index: -1;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p { color: $lg-grey;}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+ 
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+ 
+.fade.in {
+    opacity: 1;
+}
+ 
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+ 
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+ 
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+ 
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.modal-backdrop.in {
+    opacity: .8;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: rgba(33, 33, 33, 0.84);
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    outline: 0;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 63px;
+    line-height: 1;
+    color: #8BC34A;
+    filter: alpha(opacity=20);
+    background: none;
+    border: none;
+    font-family: initial;
+}

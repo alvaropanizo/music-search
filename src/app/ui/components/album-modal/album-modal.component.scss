@@ -1,0 +1,45 @@
+@import '~assets/sass/variables';
+
+.modal-dialog {
+    top: 5em;
+    background-size: cover !important;
+}
+
+.modal-body, .modal-header {
+    z-index: 1100;
+}
+
+.album-image {
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 2em;
+    img {
+        height: 8em;
+        border-radius: 50%;   
+        border: 3px solid $spoti-green;
+    }
+}
+
+h1, p {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h1 {
+    color: $lg-grey;
+}
+
+.type {
+    margin-top: 0px;
+    color: $spoti-green;
+}
+
+.listen a {
+     text-decoration:none;
+     color: $lg-green;
+     text-transform: uppercase;
+}
+ 
+.modal-body {
+    margin: 30px;
+}

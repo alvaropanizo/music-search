@@ -1,0 +1,65 @@
+@import '~assets/sass/variables';
+
+.search-keyword input {
+    padding: 1.5em 10em;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid $spoti-green;
+    border-radius: 5px;
+    font-family: $nm-text;
+    font-size: 16px;
+    color: white;
+}
+
+.search-keyword input:focus {
+    background: rgba(0,0,0,0.3);
+    border: 1.5px solid $lg-green;
+    color: white;
+    outline: $lg-green
+}
+
+li {
+    list-style: none;
+    width: 70%;
+
+    div {
+        display: inline-block;
+        margin: 0px;
+        vertical-align: middle;
+    }
+    .album-image img {
+        height: 4em;
+        border-radius: 50%;   
+    }
+    .album-image {
+        width: 20%;
+    }
+    .album-info {
+        margin-left: 2em;
+        width: 70%;
+        font-size: 16px;
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+ul.result-list {
+    padding: 0px; 
+    margin: 0px;  
+    li {
+        padding: 0.5em;
+        margin: 0 auto;
+        margin-bottom: 0.2em;
+        color: white;
+        font-size: 15px;
+        text-align: left;
+        font-family: $nm-text;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    li:hover {
+        cursor: pointer;
+        padding: 0.5em 1em;
+        width: 75%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
